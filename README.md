@@ -22,9 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-config = Huyettings.new('/path/to/settings.yml', :my_shiny_env)
-config.setting1
-config.setting2
+    config = Huyettings.new('/path/to/settings.yml', :my_shiny_env)
+    config.setting1
+    config.setting2
 
 ## Contributing
 
