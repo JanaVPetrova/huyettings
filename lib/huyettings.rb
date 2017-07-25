@@ -2,7 +2,7 @@ require 'yaml'
 require 'erb'
 
 class Huyettings
-  VERSION = '0.1.0'
+  VERSION = '0.2.0'
 
   attr_reader :filepath, :env
 
@@ -22,6 +22,6 @@ class Huyettings
   end
 
   def full_settings
-    @full_settings ||= YAML::load(ERB.new(File.read(filepath)).result)
+    YAML::load(ERB.new(File.read(filepath)).result)
   end
 end
