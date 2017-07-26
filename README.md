@@ -20,6 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
+```
+test:
+  setting1: 'setting1'
+  setting2: <%= 1 + 2 %>
+```
+
 ```ruby
 config = Huyettings.new('/path/to/settings.yml', :my_shiny_env)
 config.setting1
