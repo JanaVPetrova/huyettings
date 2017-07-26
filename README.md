@@ -1,5 +1,7 @@
 # Huyettings
 
+[![Build Status](https://travis-ci.org/JanaVPetrova/huyettings.svg?branch=master)](https://travis-ci.org/JanaVPetrova/huyettings)
+
 Supersimple configuration manager. Single level. Yaml. ERB. No more pain.
 
 ## Installation
