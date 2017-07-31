@@ -1,3 +1,5 @@
 test:
   key_with_string: 'key_with_string'
   key_with_code: <%= 1 + 2 %>
+  nested:
+    key: 'key'

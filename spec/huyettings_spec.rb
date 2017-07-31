@@ -16,4 +16,8 @@ RSpec.describe Huyettings do
   it 'returns nothing when inexistent key' do
     expect(subject.foobar).to eq nil
   end
+
+  it 'symbolizes keys' do
+    expect(subject.nested[:key]).to eq 'key'
+  end
 end
