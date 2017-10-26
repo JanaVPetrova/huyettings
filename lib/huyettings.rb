@@ -22,10 +22,10 @@ class Huyettings
   end
 
   def full_settings
-    key_symbolizer(raw_yaml)
+    key_symbolizer(evaluated_yaml)
   end
 
-  def raw_yaml
+  def evaluated_yaml
     YAML.load(ERB.new(File.read(filepath)).result)
   end
 
