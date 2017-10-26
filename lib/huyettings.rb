@@ -22,12 +22,16 @@ class Huyettings
   end
 
   def full_settings
-    key_symbolizer(YAML.load(ERB.new(File.read(filepath)).result))
+    key_symbolizer(raw_yaml)
+  end
+
+  def raw_yaml
+    YAML.load(ERB.new(File.read(filepath)).result)
   end
 
   def key_symbolizer(hash)
     hash.each_with_object({}) do |(key, value), memo|
-      if value.is_a? Hash
+      if value.is_a?(Hash)
         memo[key.to_sym] = key_symbolizer(value)
       else
         memo[key.to_sym] = value
