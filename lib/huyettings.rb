@@ -2,7 +2,7 @@ require 'yaml'
 require 'erb'
 
 class Huyettings
-  VERSION = '0.3.0'.freeze
+  VERSION = '0.4.0'.freeze
 
   attr_reader :filepath, :env
 
