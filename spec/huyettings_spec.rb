@@ -20,4 +20,10 @@ RSpec.describe Huyettings do
   it 'symbolizes keys' do
     expect(subject.nested[:key]).to eq 'key'
   end
+
+  context 'when no config file given' do
+    subject { described_class.new }
+
+    it { expect { subject }.to raise_error ArgumentError }
+  end
 end
