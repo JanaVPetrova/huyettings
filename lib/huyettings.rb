@@ -31,10 +31,10 @@ class Huyettings
 
   def key_symbolizer(hash)
     hash.each_with_object({}) do |(key, value), memo|
-      if value.is_a?(Hash)
-        memo[key.to_sym] = key_symbolizer(value)
+      memo[key.to_sym] = if value.is_a?(Hash)
+        key_symbolizer(value)
       else
-        memo[key.to_sym] = value
+        value
       end
     end
   end
