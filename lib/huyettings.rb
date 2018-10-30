@@ -7,6 +7,9 @@ class Huyettings
   attr_reader :filepath, :env
 
   def initialize(filepath, env)
+    raise ArgumentError, 'filepath must be present' unless filepath
+    raise ArgumentError, 'env must be present' unless env
+
     @filepath = filepath
     @env = env
   end
